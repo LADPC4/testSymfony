@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} SDD Employees {% endblock %}
+
+{% block body %}
+
+<h1>Symfony Testing: Tutorial prototype for learning</h1>
+
+<div>
+    Meet the {{ sddEmployees|length }} Employees of Solutions Development Division!
+
+    {% if sddEmployees|length >  2 %}
+        <p>
+            {# Can you meet "ALL" of them? #}
+            Please meet all of them!
+        <p>
+    {% endif %}
+
+</div>
+
+<div>
+    <h2>SDD Employees</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>
+                <a href="{{ path('app_employee_show', { id: sddEmployee.id }) }}">
+                    {{ sddEmployee.name|upper }}
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <th>Position</th>
+            <td>{{ sddEmployee.position }}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{{ sddEmployee.status }}</td>
+        </tr>
+    </table>
+</div>
+
+{% endblock %}
