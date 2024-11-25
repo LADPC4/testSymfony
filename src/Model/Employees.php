@@ -8,7 +8,7 @@ class Employees
         private int $id,
         private string $name,
         private string $position,
-        private string $status
+        private EmployeeStatusEnum $status
     ) {
         
     }
@@ -28,8 +28,13 @@ class Employees
             return $this->position;
         }
         
-        public function getStatus(): string
+        public function getStatus(): EmployeeStatusEnum
         {
             return $this->status;
+        }
+
+        public function getStatusString(): string
+        {
+            return $this->status->value;
         }
 }

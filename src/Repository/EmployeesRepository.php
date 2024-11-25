@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Model\Employees;
+use App\Model\EmployeeStatusEnum;
 use Psr\Log\LoggerInterface;
 
 class EmployeesRepository
@@ -21,37 +22,37 @@ class EmployeesRepository
                 1,
                 'Lance Adrian De Pasion',
                 'Technical Assistant I',
-                'Contract of Service'
+                EmployeeStatusEnum::COS,
             ),
             new Employees(
                 2,
                 'Zabrina Lazaro',
                 'Technical Assistant I',
-                'Contract of Service'
+                EmployeeStatusEnum::COS,
             ),
             new Employees(
                 3,
                 'Raven FLores',
                 'Technical Assistant II',
-                'Contract of Service'
+                EmployeeStatusEnum::COS,
             ),
             new Employees(
                 4,
                 'Jonathan Fontanilla',
                 'Information Technology Officer II',
-                'Permanent'
+                EmployeeStatusEnum::PERMANENT,
             ),
             new Employees(
                 5,
                 'Maria Clarisse Ligunas-Roque',
                 'Information Technology Officer III',
-                'Permanent'
+                EmployeeStatusEnum::PERMANENT,
             ),
             new Employees(
                 6,
                 'Miguel Karlo Macariola',
                 'Information System Researcher III',
-                'Permanent'
+                EmployeeStatusEnum::PERMANENT,
             ),
         ];
     }
